@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hello</title>
+
+   
+</head>
+<body>
+
+    <h1>Chai aur JavaScript</h1>
+    <button id="start">Start</button>
+     <button id="stop">Stop</button>
+    
+    <Script>
+
+        let intervalID;
+
+    const interval = function(){
+        console.log("Jaideep Singh",Date.now())
+      }
+      
+
+      
+         
+      document.querySelector("#start").addEventListener('click', function(){
+        if (!intervalID) {  // Check if the interval is already running
+    intervalID = setInterval(interval, 2000);
+  }
+
+      })
+
+      document.querySelector('#stop').addEventListener('click',function(){
+           clearInterval(intervalID)
+           console.log("STOPEED")
+      })
+
+    </Script>
+</body>
+</html>
